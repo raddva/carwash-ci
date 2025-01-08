@@ -2,8 +2,13 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController
+class Admin extends BaseController
 {
+    public function login(): string
+    {
+        return view('admin/login');
+    }
+
     public function index(): string
     {
         return view('admin/index');
@@ -24,19 +29,19 @@ class Home extends BaseController
         return view('admin/ui-features/typography');
     }
 
-    public function icons(): string
+    public function packages(): string
     {
-        return view('admin/icons/mdi');
+        return view('admin/packages');
     }
     
-    public function forms(): string
+    public function transactions(): string
     {
-        return view('admin/forms/basic_elements');
+        return view('admin/transactions');
     }
 
-    public function charts(): string
+    public function users(): string
     {
-        return view('admin/charts/chartjs');
+        return view('admin/users');
     }
 
     public function tables(): string
